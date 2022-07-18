@@ -1,0 +1,21 @@
+<form class="row">
+    <div class="form-group col-md-2">
+      <label for="nombre" id="nombre" class="visually-hidden">Nombre</label>
+      <input type="text" name="nombreCuley" placeholder="escribe" class="form-control" #nombreInput>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="apellido" id="nombre" class="visually-hidden">Apellido</label>
+      <input 
+      type="text" 
+      name="ApellidoCuley" 
+      placeholder="escribe2" 
+      class="form-control" 
+      #apellidoInput
+      />
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary" 
+      (click)="agregarPersona(nombreInput, apellidoInput)">
+      Ingresar</button>
+    </div>
+  </form>
