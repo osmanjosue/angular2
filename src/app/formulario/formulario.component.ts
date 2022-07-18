@@ -12,13 +12,15 @@ export class FormularioComponent  {
 
  /*  nombreInput:string='';
   apellidoInput:string=''; */
+  @ViewChild ('nombreInput') nombreRecibido: ElementRef;
+  @ViewChild ('apellidoInput') apellidoRecibido: ElementRef;
 
   
 
   
 
-  public agregarPersona(nombreInput: HTMLInputElement, apellidoInput: HTMLInputElement){
-    let persona1=new PersonaSatanica(nombreInput.value, apellidoInput.value);
+  public agregarPersona(){
+    let persona1=new PersonaSatanica(this.nombreRecibido.nativeElement.value, this.apellidoRecibido.nativeElement.value);
     //this.personas.push(persona1);
     this.personaCreada.emit(persona1);
     
